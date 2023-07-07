@@ -1,0 +1,14 @@
+.page-footer {
+  background-color: #333;
+  padding: 12px 0;
+  color: #fff;
+}
+
+.page-footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-footer p {
+  margin: 0;
+}
