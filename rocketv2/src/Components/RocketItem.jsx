@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
+import NavBar from "./NavBar";
 import RocketImg from "./RocketImg";
+import Footer from "./Footer";
 
 function RocketItem() {
   const [rocket, setRocket] = useState();
@@ -17,16 +20,16 @@ function RocketItem() {
   }, [rocket_id]);
   return (
     <div>
-      {rocket ? (
-        <div>
-          <h2>{rocket.rocket_name}</h2>
-          <p>{rocket.description}</p>
-          {/* <p>Mass [kg]: {rocket.mass.kg}</p> */}
-          <RocketImg image={rocket?.flickr_images[0]} />
-        </div>
-      ) : (
-        <p>Loading...</p>
-      )}
+      <NavBar />
+      <div>
+        <h2>{rocket?.rocket_name}</h2>
+        <p>{rocket?.description}</p>
+        {/* <p>Mass [kg]: {rocket.mass.kg}</p> */}
+        <RocketImg image={rocket?.flickr_images[0]} />
+        <p></p>
+      </div>
+
+      <Footer />
     </div>
   );
 }

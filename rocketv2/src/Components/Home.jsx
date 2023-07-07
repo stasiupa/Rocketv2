@@ -1,16 +1,18 @@
 import React from "react";
-import RocketImg from "./RocketImg";
+
 import Footer from "./Footer";
 import NavBar from "./NavBar";
-import RocketItem from "./RocketItem";
+
+import "./Home.css";
 
 function Home() {
   return (
     <div>
       <NavBar />
-      <RocketImg />
+      <div className="home-page">
+        Wybierz w nawigacji rakietę o której chcesz się dowiedzieć więcej.
+      </div>
       <Footer />
-      {/* <RocketItem /> */}
     </div>
   );
 }
