@@ -16,15 +16,18 @@ function NavBar() {
 
   return (
     <nav className="navbar">
-      {rockets.map((item) => (
-        <ul key={item.rocket_id} className="navbar-list">
+      <ul className="navbar-list">
+        <Link className="navbar-link" to="/">
+          Home
+        </Link>
+        {rockets.map((item) => (
           <li className="navbar-item">
             <Link className="navbar-link" to={`/rocket/${item.rocket_id}`}>
               {item.rocket_name}
             </Link>
           </li>
-        </ul>
-      ))}
+        ))}
+      </ul>
     </nav>
   );
 }
